@@ -1,0 +1,43 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    line-height: 1.3;
+}
+
+nav {
+    background-color: aqua;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+
+#links {
+    display: flex;
+    flex-direction: row;
+    /* background-color: blueviolet; */
+    width: 100%;
+    margin: auto;
+    font-size: 3rem;
+}
+
+#links input {
+    margin: auto 20px;
+    height: 40px;
+    font-size: 2rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+#home {
+    min-width: 188px;
+    width: 100%;
+    margin: auto;
+    margin-left: 50px;
+}
