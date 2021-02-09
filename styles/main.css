@@ -41,3 +41,12 @@ h1 {
     margin: auto;
     margin-left: 50px;
 }
+
+form {
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
+    width: 400px;
+    padding: 40px;
+}
