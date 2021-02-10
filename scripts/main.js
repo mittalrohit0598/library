@@ -10,3 +10,8 @@ function Book(title, author, NoOfPages, readYet) {
 
 let hobbit = new Book("abc", "def", 123, false);
 console.log(hobbit.info());
+
+function toggleForm() {
+    let div = document.getElementById("add-book-form");
+    div.style.display = div.style.display == "none" || div.style.display.length == 0 ? "block" : "none";
+}

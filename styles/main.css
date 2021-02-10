@@ -51,6 +51,10 @@ form {
     padding: 40px;
 }
 
+#add-book-form {
+    display: none;
+}
+
 .text-box {
     display: block;
     width: 100%;
