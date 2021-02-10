@@ -22,22 +22,25 @@
     <main>
         <div>
             <form action="">
-                <div>
+                <div class="form-group">
                     <label for="author">Author</label>
-                    <input type="text" name="author" id="author">
+                    <input type="text" name="author" id="author" class="text-box">
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="title">Title</label>
-                    <input type="text" name="title" id="title">
+                    <input type="text" name="title" id="title" class="text-box">
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="title">Pages</label>
-                    <input type="number" name="pages" id="pages">
+                    <input type="number" name="pages" id="pages" class="text-box">
                 </div>
-                <div>
-                    <label>Read?</label>
+                <div class="form-group">
+                    <label>Have you read the book?</label>
                     <input type="radio" name="read" value="yes" id="yes"><label for="yes">Yes</label>
                     <input type="radio" name="read" value="no" id="no"><label for="no">No</label>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Add Book">
                 </div>
             </form>
         </div>
