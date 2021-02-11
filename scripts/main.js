@@ -32,10 +32,19 @@ let toggleForm = function() {
 
 let deleteBook = function() {
     this.parentNode.parentNode.removeChild(this.parentNode);
+    myLibrary.splice(this.parentNode.dataset.index, 1);
+    updateIndex();
+    console.log(myLibrary);
+}
+
+let updateIndex = function() {
+    document.querySelectorAll(".card").forEach((book, i) => {
+        book.dataset.index = i;
+    })
 }
 
 window.onload = function() {
-    myLibrary.forEach(book => {
+    myLibrary.forEach((book, i) => {
         let cardDiv = document.createElement("div");
         cardDiv.className = "card";
         let titleDiv = document.createElement("div");
@@ -55,6 +64,7 @@ window.onload = function() {
         cardDiv.appendChild(authorDiv);
         cardDiv.appendChild(deleteButton);
         cardDiv.appendChild(changeStatusButton);
+        cardDiv.dataset.index = i;
         document.getElementById("books").appendChild(cardDiv);
     });
 
