@@ -43,6 +43,11 @@ let updateIndex = function() {
     })
 }
 
+let toggleReadStatus = function() {
+    myLibrary[this.parentNode.dataset.index].readYet = !myLibrary[this.parentNode.dataset.index].readYet
+    console.log(myLibrary[this.parentNode.dataset.index].readYet)
+}
+
 window.onload = function() {
     myLibrary.forEach((book, i) => {
         let cardDiv = document.createElement("div");
@@ -60,6 +65,7 @@ window.onload = function() {
         let changeStatusButton = document.createElement("input");
         changeStatusButton.value = "ChangeReadStatus";
         changeStatusButton.type = "button"
+        changeStatusButton.addEventListener('click', toggleReadStatus, false);
         cardDiv.appendChild(titleDiv);
         cardDiv.appendChild(authorDiv);
         cardDiv.appendChild(deleteButton);
