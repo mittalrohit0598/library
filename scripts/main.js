@@ -20,12 +20,17 @@ myLibrary.push(hobbit3);
 
 console.log(myLibrary)
 
-function toggleForm() {
-    let div = document.getElementById("add-book-form");
-    div.style.display = div.style.display == "none" || div.style.display.length == 0 ? "block" : "none";
+let toggleForm = function() {
+    let formDiv = document.getElementById("add-book-form");
+    let booksDiv = document.getElementById("books");
+    let filterDiv = document.getElementById("filter");
+    formDiv.style.display = formDiv.style.display == "none" || formDiv.style.display.length == 0 ? "block" : "none";
+    booksDiv.style.display = booksDiv.style.display == "none" ? "flex" : "none"
+    filterDiv.style.display = filterDiv.style.display == "none" ? "block" : "none"
+    this.value = this.value == "Add a book" ? "Show books" : "Add a book";
 }
 
-Object.prototype.deleteBook = function() {
+let deleteBook = function() {
     this.parentNode.parentNode.removeChild(this.parentNode);
 }
 
@@ -52,4 +57,6 @@ window.onload = function() {
         cardDiv.appendChild(changeStatusButton);
         document.getElementById("books").appendChild(cardDiv);
     });
+
+    document.getElementById("add-book").addEventListener('click', toggleForm, false);
 }
